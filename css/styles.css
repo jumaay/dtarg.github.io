@@ -65,6 +65,16 @@ nav .navLinksBurger{
     list-style: none;
 }
 
+nav .navLinksBurger img{
+    width: 1rem;
+}
+
+nav .collapse .p-4 p{
+    font-family: 'Roboto', sans-serif;
+    color: #6B728E;
+    font-size: 0.7rem;
+}
+
 nav .navLinksBurger li a{
     transition: 0.5s;
     color: #fff;
@@ -138,6 +148,12 @@ footer{
     margin: auto 1rem 1rem auto;
     font-size: 0.7rem;
     color: #6B728E;
+}
+
+@media screen and (max-width: 600px) {
+    footer{
+        display: none;
+    }
 }
 
 /* BODY STYLES */
