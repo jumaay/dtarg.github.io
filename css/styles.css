@@ -164,6 +164,11 @@ body{
 
 .container .twitter-timeline{
     grid-column: span 2;
+    display: flex; 
+    width: 550px; 
+    max-width: 100%; 
+    margin-top: 0px; 
+    margin-bottom: 0px;
 }
 
 .container .spotifyPlayer1, .spotifyPlayer2, .spotifyPlayer3, .spotifyPlayer4{
@@ -216,8 +221,13 @@ body{
         grid-column: span 1;
     }
 
+    .container .youtubeVideo iframe{
+        width: 300px;
+    }
+
     .container .twitter-timeline{
         grid-column: span 1;
+        width: 300px;
     }
 
     .container .spotifyPlayer1{
@@ -227,7 +237,7 @@ body{
 
     .container .spotifyPlayer1 iframe{
         transition: 0.5s;
-        width: 500px;
+        width: 300px;
     }
 
     .container .spotifyPlayer2, .spotifyPlayer3, .spotifyPlayer4{
@@ -324,7 +334,7 @@ body{
         grid-template-rows: repeat(15, 1fr);
     }
     .albumsContainer img{
-        width: 350px;
+        width: 250px;
         transition: 0.5s;
     }
     .albumsContainer p{
@@ -468,7 +478,7 @@ body{
   }
 
     .containerNosotros .bioPic{
-        width: 17rem;
+        width: 150px;
     }
 
     .nosotrosPic{
@@ -509,6 +519,7 @@ body{
 
 .containerDTWorld ul{
     grid-column: span 2;
+    align-items: start;
     list-style: none;
     text-align: center;
 }
@@ -530,6 +541,10 @@ body{
 /* DTWORLD 600px MOBILE */
 
 @media screen and (max-width: 600px){
+
+    .containerDTWorld img{
+        width: 200px;
+    }
 
     .containerDTWorld section{
         display: none;
