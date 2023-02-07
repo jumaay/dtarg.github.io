@@ -525,3 +525,25 @@ body{
     text-decoration: underline;
     color:#fff;
 }
+
+/* DTWORLD 600px MOBILE */
+
+@media screen and (max-width: 600px){
+
+    .containerDTWorld section{
+        display: none;
+    }
+
+    .containerDTWorld{
+        grid-template-columns: 1fr;
+    }
+
+    .containerDTWorld ul{
+        grid-column: span 1;
+    }
+
+    .containerDTWorld .dtWorldPic{
+        text-align: center;
+    }
+
+}
