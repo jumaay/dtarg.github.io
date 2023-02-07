@@ -584,5 +584,14 @@ body{
     .containerDTWorld .dtWorldPic{
         text-align: center;
     }
+    
+    .containerDTWorld ul{
+    text-align: left;
+}
+    
+    .containerDTWorld ul li{
+    transition: 0.5s;
+    font-size: 0.8rem;
+}
 
 }
