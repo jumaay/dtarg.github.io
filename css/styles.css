@@ -10,6 +10,12 @@ font-family: 'Roboto', sans-serif; */
     padding: 0;
 }
 
+body{
+   min-height: 400px;
+   margin-bottom: 20%;
+   clear: both;
+}
+
 /* NAVBAR STYLES */
 
 nav .navBar{
@@ -578,5 +584,14 @@ body{
     .containerDTWorld .dtWorldPic{
         text-align: center;
     }
+    
+    .containerDTWorld ul{
+    text-align: left;
+}
+    
+    .containerDTWorld ul li{
+    transition: 0.5s;
+    font-size: 0.8rem;
+}
 
 }
