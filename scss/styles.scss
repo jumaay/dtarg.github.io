@@ -1,0 +1,37 @@
+//npm run build-css
+@import "utils/vars";
+@import "utils/lists";
+@import "utils/extend";
+@import "utils/mixin";
+
+
+/* RESET */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* GLOBAL STYLES */
+body{
+    min-height: 400px;
+    margin-bottom: 20%;
+    clear: both;
+    background-color: nth($dtColors , 4);
+}
+
+
+@import "html/navbar";
+
+@import "html/footer";
+
+@import "html/home";
+
+@import "html/discografia";
+
+@import "html/biografia";
+
+@import "html/nosotros";
+
+@import "html/dtworld";

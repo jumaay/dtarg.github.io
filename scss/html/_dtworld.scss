@@ -1,0 +1,81 @@
+@import "../utils/vars";
+@import "../utils/lists";
+@import "../utils/extend";
+@import "../utils/mixin";
+
+/* DTWORLD STYLES */
+
+.containerDTWorld{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-content: center;
+    text-align: center;
+    gap: 1rem;
+    margin-top: 3rem;
+
+    .dtWorldPic{
+        grid-column: span 1;
+        text-align: right;
+
+        img{
+            width: 320px;
+            border-radius: 1rem;
+        }
+    }
+    section{
+        width: 400px;
+        grid-column: span 1;
+        text-align: left;
+        color: #fff;
+        font-family: $font-par;
+    }
+    ul{
+        grid-column: span 2;
+        align-items: start;
+        list-style: none;
+        text-align: center;
+
+        li{
+            a{
+                @include links-mixin(nth($dtColors, 1));
+                text-transform: uppercase;
+                font-family: $font-par;
+            }
+            a:hover{
+                transition: $standard-trans;
+                text-decoration: underline;
+                color: #fff;
+            }
+        }
+    
+    }
+}
+
+/* DTWORLD 600px MOBILE */
+
+@media screen and (max-width: 600px){
+    .containerDTWorld{
+        grid-template-columns: 1fr;
+
+        img{
+            width: 200px;
+        }
+        section{
+            display: none;
+        }
+        ul{
+            grid-column: span 1;
+            text-align: left;
+
+            li{
+                transition: $standard-trans;
+                font-size: 0.8rem;
+            }
+        }
+        .dtWorldPic{
+            text-align: center;
+        }
+
+    }
+}

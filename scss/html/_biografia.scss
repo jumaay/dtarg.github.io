@@ -1,0 +1,38 @@
+@import "../utils/vars";
+@import "../utils/lists";
+@import "../utils/extend";
+@import "../utils/mixin";
+
+/* BIOGRAFIA STYLES */
+.containerBio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img{
+        margin-top: 1rem;
+        width: 95%;
+        position: relative;
+        border-radius: 20px;
+        box-shadow: 0px -5px 10px #000;
+    }
+    h1{
+        font-family: $font-titles;
+        color: #fff;
+        margin: 2rem auto;
+        text-shadow: 0px 5px 5px #000;
+    }
+    section{
+        background-color: nth($dtColors , 2);
+        color: #fff;
+        font-family: $font-par;
+        padding: 6% 10% 15% 10%;
+
+        a{
+            @include links-mixin(nth($dtColors, 4));
+        }
+        a:hover{
+            @include links-mixin(#fff);
+        }
+    }
+}

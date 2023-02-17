@@ -1,0 +1,54 @@
+@import "../utils/vars";
+@import "../utils/lists";
+@import "../utils/extend";
+@import "../utils/mixin";
+
+/* FOOTER STYLES */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: nth($dtColors, 1);
+    font-family: $font-titles;
+    margin-top: 10%;
+    
+    .socialMedia{
+        text-align: center;
+        
+        img{
+            width: 1rem;
+        }
+        ul{
+            list-style: none;
+            
+            li{
+                margin: 3rem 2rem 1rem 2rem;
+                display: inline-block;
+
+                a{
+                    transition: $standard-trans;
+                }
+                a:hover{
+                    transition: $standard-trans;
+                    opacity: 60%;
+                }
+            }
+        }
+    }
+    .copyright{
+        text-align: right;
+        
+        p{
+            margin: auto 1rem 1rem auto;
+            font-size: 0.7rem;
+            color: nth($dtColors , 4);
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    footer{
+        display: none;
+    }
+}

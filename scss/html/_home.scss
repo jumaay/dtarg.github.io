@@ -1,0 +1,117 @@
+@import "../utils/vars";
+@import "../utils/lists";
+@import "../utils/extend";
+@import "../utils/mixin";
+
+/* HOME STYLES */
+
+.container{
+    display: grid;
+    min-height: 90vh;
+    gap: 1rem;
+    padding: 3%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    transition: $standard-trans;
+
+    .youtubeVideo{
+        grid-column: span 2;
+    }
+    .twitter-timeline{
+        grid-column: span 2;
+        display: flex;
+        width: 550px;
+        max-width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .spotifyPlayer1{
+        @extend %spotiPlayerBig;
+    }
+    .spotifyPlayer2{
+        @extend %spotiPlayerBig;
+    }
+    .spotifyPlayer3{
+        @extend %spotiPlayerBig;
+    }
+    .spotifyPlayer4{
+        @extend %spotiPlayerBig;
+    }
+}
+
+/* WHEN VIDEO AND TWITTER TIMELINE OVERLAPS MQ */
+
+@media screen and (max-width: 1170px){
+    .container{
+        transition: $standard-trans;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+        .youtubeVideo{
+            grid-column: span 3;
+        }
+        .twitter-timeline{
+            grid-column: span 3;
+        }
+        iframe{
+            transition: $standard-trans;
+        }
+
+        // NOT USING EXTEND, DOESN'T WORK INSIDE MEDIA QUERY
+        .spotifyPlayer1{
+            @include spotiPlayerMid;
+        }
+        .spotifyPlayer2{
+            @include spotiPlayerMid;
+        }
+        .spotifyPlayer3{
+            @include spotiPlayerMid;
+        }
+        .spotifyPlayer4{
+            transition: $standard-trans;
+            display: none;
+        }
+    }
+}
+
+/* MOBILE MQ */
+@media screen and (max-width:600px){
+    .container{
+        transition: $standard-trans;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+
+        .youtubeVideo{
+            grid-column: span 1;
+
+            iframe{
+                width: 300px;
+            }
+        }
+
+        .twitter-timeline{
+            grid-column: span 1;
+            width: 300px;
+        }
+
+        .spotifyPlayer1{
+            margin-bottom: 30%;
+            grid-column: span 1;
+
+            iframe{
+                transition: $standard-trans;
+                width: 300px;
+            }
+            .spotifyPlayer2{
+                @include spotiPlayerMobile;
+            }
+            .spotifyPlayer3{
+                @include spotiPlayerMobile;
+            }
+            .spotifyPlayer4{
+                @include spotiPlayerMobile;
+            }
+        }
+    }
+}

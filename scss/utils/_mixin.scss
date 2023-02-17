@@ -1,0 +1,15 @@
+@mixin links-mixin($color-text){
+    transition: $standard-trans;
+    text-decoration: none;
+    color: $color-text;
+}
+
+@mixin spotiPlayerMid{
+    margin-bottom: 40%;
+    grid-column: span 1;
+}
+
+@mixin spotiPlayerMobile{
+    transition: $standard-trans;
+    display: none;
+}

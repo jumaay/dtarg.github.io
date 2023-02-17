@@ -1,0 +1,91 @@
+@import "../utils/vars";
+@import "../utils/lists";
+@import "../utils/extend";
+@import "../utils/mixin";
+
+/* NAVBAR STYLES */
+nav{
+    .navBar{
+        background-color: nth($dtColors , 1);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 2%;
+        font-family: $font-titles;
+    }
+    .logoLink{
+        transition: $standard-trans;
+        width: 6rem;
+    }
+    .logoLink:hover{
+        transition: $standard-trans;
+        opacity: 80%;
+    }
+    .navLinks{
+        list-style: none;
+        li{
+            margin: auto 1rem;
+            display: inline-block;
+            a{
+                @include links-mixin(#fff);
+            }
+            a:hover{
+                @include links-mixin(nth($dtColors, 4));
+                border-bottom: 1px solid nth($dtColors , 4);
+            }
+        }
+    }
+
+    // BURGER MENU
+    .burgerStatus{
+        display: none;
+    }
+    .navLinksBurger{
+        display: none;
+        list-style: none;
+        img{
+            width: 1rem;
+        }
+        li{
+            a{
+                @include links-mixin(#fff);
+            }
+            a:hover{
+                @include links-mixin(nth($dtColors, 4));
+                border-bottom: 1px solid nth($dtColors , 4);
+            }
+        }
+    }
+    .collapse{
+        .p-4{
+            p{
+                font-family: $font-par;
+                color: nth($dtColors , 4);
+                font-size: 0.7rem;
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    nav{
+        .burgerStatus{
+            display: block;
+        }
+        .navLinks{
+            display: none;
+        }
+        .navLinksBurger{
+            display: block;
+        }
+        .collapse{
+            .p-4{
+                p{
+                    display: block;
+                }
+            }
+        }
+    }
+}
