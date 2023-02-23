@@ -298,11 +298,6 @@ footer {
       text-decoration: none;
       color: #fff; }
 
-/* MOBILE MQ */
-@media screen and (max-width: 600px) {
-  section {
-    padding: 0px; } }
-
 .container .spotifyPlayer1, .container .spotifyPlayer2, .container .spotifyPlayer3, .container .spotifyPlayer4 {
   transition: 0.5s;
   grid-column: span 1; }
