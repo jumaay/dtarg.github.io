@@ -21,6 +21,12 @@ body{
     background-color: nth($dtColors , 4);
 }
 
+@media screen and (max-width:600px) {
+    body{
+        margin-bottom: 0;
+    }  
+}
+
 
 @import "html/navbar";
 

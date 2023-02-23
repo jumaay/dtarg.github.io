@@ -26,8 +26,11 @@
         background-color: nth($dtColors , 2);
         color: #fff;
         font-family: $font-par;
-        padding: 6% 10% 15% 10%;
+        padding-left: 30%;
 
+        p{
+            width: 60%;
+        }
         a{
             @include links-mixin(nth($dtColors, 4));
         }
@@ -35,4 +38,14 @@
             @include links-mixin(#fff);
         }
     }
-}
+ }
+     /* MOBILE MQ */
+     @media screen and (max-width:600px){
+        section{
+            padding-left: 0;
+
+            p{
+                width: auto;
+            }
+        }
+     }
