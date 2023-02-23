@@ -26,7 +26,7 @@
         background-color: nth($dtColors , 2);
         color: #fff;
         font-family: $font-par;
-        padding: 2% 25% 2%;
+        padding: 5%;
         a{
             @include links-mixin(nth($dtColors, 4));
         }
@@ -34,4 +34,10 @@
             @include links-mixin(#fff);
         }
     }
+ }
+
+ @media screen and (width:600px) {
+    section{
+        padding: auto;
+    }    
  }
