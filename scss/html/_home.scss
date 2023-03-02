@@ -7,7 +7,9 @@
 
 .indexTitle{
     text-align: center;
-    color: #fff;
+    background: -webkit-linear-gradient(left , nth($dtColors, 1), nth($dtColors, 3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 500;
     font-family: $font-par;
     font-size: 2rem;

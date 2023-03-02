@@ -135,7 +135,9 @@ footer {
 /* HOME STYLES */
 .indexTitle {
   text-align: center;
-  color: #fff;
+  background: -webkit-linear-gradient(left, #404258, #50577A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
