@@ -5,9 +5,25 @@
 
 /* HOME STYLES */
 
+.indexTitle{
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-family: $font-par;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    transition: $standard-trans;
+}
+
+.indexTitle:hover{
+    transition: $standard-trans;
+    opacity: 80%;
+}
+
 .container{
     display: grid;
-    min-height: 90vh;
+    min-height: 70vh;
     gap: 1rem;
     padding: 3%;
     grid-template-columns: repeat(4, 1fr);
@@ -77,6 +93,9 @@
 
 /* MOBILE MQ */
 @media screen and (max-width:600px){
+    .indexTitle{
+        font-size: 1rem;
+    }
     .container{
         transition: $standard-trans;
         grid-template-columns: 1fr;
