@@ -4,11 +4,12 @@
 @import "../utils/mixin";
 
 /* NAVBAR STYLES */
+
 nav{
     .navBar{
         background-color: nth($dtColors , 1);
-        width: 100%;
         display: flex;
+        width: 100%;
         justify-content: space-between;
         align-items: center;
         padding-right: 2%;
@@ -51,6 +52,7 @@ nav{
         li{
             a{
                 @include links-mixin(#fff);
+                font-size: .7rem;
             }
             a:hover{
                 @include links-mixin(nth($dtColors, 4));
@@ -63,14 +65,14 @@ nav{
             p{
                 font-family: $font-par;
                 color: nth($dtColors , 4);
-                font-size: 0.7rem;
+                font-size: 0.5rem;
                 display: none;
             }
         }
     }
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:768px){
     nav{
         .burgerStatus{
             display: block;

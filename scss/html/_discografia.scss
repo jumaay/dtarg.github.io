@@ -60,9 +60,29 @@
     }
 }
 
-/* WHEN ALBUMS COLLAPSE SCREENSIZE */
+/* TABLET & COLLAPSE MQ */
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:1080px) {
+    .albumsContainer{
+        justify-content: center;
+        margin: 6% auto 30% auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+
+        img{
+            width: 200px;
+            transition: $standard-trans;
+        }
+        p{
+            font-size: 1.2rem;
+            transition: $standard-trans;
+        }
+    }
+}
+
+/* MOBILE & COLLAPSE MQ */
+
+@media screen and (max-width:630px) {
     .albumsContainer{
         justify-content: center;
         margin: 6% auto 30% auto;

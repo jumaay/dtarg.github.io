@@ -26,8 +26,8 @@ body {
 /* NAVBAR STYLES */
 nav .navBar {
   background-color: #404258;
-  width: 100%;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding-right: 2%;
@@ -68,7 +68,8 @@ nav .navLinksBurger {
   nav .navLinksBurger li a {
     transition: 0.5s;
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    font-size: .7rem; }
   nav .navLinksBurger li a:hover {
     transition: 0.5s;
     text-decoration: none;
@@ -78,10 +79,10 @@ nav .navLinksBurger {
 nav .collapse .p-4 p {
   font-family: "Roboto", sans-serif;
   color: #6B728E;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   display: none; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   nav .burgerStatus {
     display: block; }
   nav .navLinks {
@@ -124,7 +125,7 @@ footer {
       font-size: 0.7rem;
       color: #6B728E; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   footer {
     display: none; } }
 
@@ -168,33 +169,35 @@ footer {
     margin-top: 0px;
     margin-bottom: 0px; }
 
-/* WHEN VIDEO AND TWITTER TIMELINE OVERLAPS MQ */
-@media screen and (max-width: 1170px) {
+/* TABLET & COLLAPSE MQ */
+@media screen and (max-width: 1200px) {
+  .indexTitle {
+    font-size: 1.5rem; }
   .container {
     transition: 0.5s;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr); }
     .container .youtubeVideo {
-      grid-column: span 3; }
+      grid-column: span 1; }
     .container .twitter-timeline {
-      grid-column: span 3; }
+      grid-column: span 1; }
     .container iframe {
-      transition: 0.5s; }
+      transition: 0.5s;
+      width: 600px; }
     .container .spotifyPlayer1 {
-      margin-bottom: 40%;
       grid-column: span 1; }
     .container .spotifyPlayer2 {
-      margin-bottom: 40%;
-      grid-column: span 1; }
+      transition: 0.5s;
+      display: none; }
     .container .spotifyPlayer3 {
-      margin-bottom: 40%;
-      grid-column: span 1; }
+      transition: 0.5s;
+      display: none; }
     .container .spotifyPlayer4 {
       transition: 0.5s;
       display: none; } }
 
 /* MOBILE MQ */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .indexTitle {
     font-size: 1rem; }
   .container {
@@ -269,8 +272,22 @@ footer {
   100% {
     transform: scale(1); } }
 
-/* WHEN ALBUMS COLLAPSE SCREENSIZE */
-@media screen and (max-width: 600px) {
+/* TABLET & COLLAPSE MQ */
+@media screen and (max-width: 1080px) {
+  .albumsContainer {
+    justify-content: center;
+    margin: 6% auto 30% auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr); }
+    .albumsContainer img {
+      width: 200px;
+      transition: 0.5s; }
+    .albumsContainer p {
+      font-size: 1.2rem;
+      transition: 0.5s; } }
+
+/* MOBILE & COLLAPSE MQ */
+@media screen and (max-width: 630px) {
   .albumsContainer {
     justify-content: center;
     margin: 6% auto 30% auto;
@@ -319,7 +336,7 @@ footer {
     .containerBio section .bioMobile {
       display: none; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .containerBio img {
     width: 90%; }
   .containerBio section {
@@ -368,7 +385,7 @@ footer {
     width: 100%;
     height: 100%; }
 
-/* NOSOTROS 1180px ADJUST */
+/* NOSOTROS COLLAPSE & TABLET MQ*/
 @media screen and (max-width: 1180px) {
   .containerNosotros {
     grid-template-columns: repeat(2, 1fr);
@@ -440,8 +457,19 @@ footer {
       text-decoration: underline;
       color: #fff; }
 
+@media screen and (max-width: 768px) {
+  .containerDTWorld {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center; }
+    .containerDTWorld .dtWorldPic {
+      text-align: center; }
+    .containerDTWorld section {
+      text-align: center; } }
+
 /* DTWORLD 600px MOBILE */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .containerDTWorld {
     grid-template-columns: 1fr; }
     .containerDTWorld img {

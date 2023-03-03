@@ -58,22 +58,30 @@
     }
 }
 
-/* WHEN VIDEO AND TWITTER TIMELINE OVERLAPS MQ */
 
-@media screen and (max-width: 1170px){
+
+
+/* TABLET & COLLAPSE MQ */
+
+@media screen and (max-width: 1200px){
+
+    .indexTitle{
+        font-size: 1.5rem;
+    }
     .container{
         transition: $standard-trans;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
 
         .youtubeVideo{
-            grid-column: span 3;
+            grid-column: span 1;
         }
         .twitter-timeline{
-            grid-column: span 3;
+            grid-column: span 1;
         }
         iframe{
             transition: $standard-trans;
+            width: 600px;
         }
 
         // NOT USING EXTEND, DOESN'T WORK INSIDE MEDIA QUERY
@@ -81,10 +89,12 @@
             @include spotiPlayerMid;
         }
         .spotifyPlayer2{
-            @include spotiPlayerMid;
+            transition: $standard-trans;
+            display: none;
         }
         .spotifyPlayer3{
-            @include spotiPlayerMid;
+            transition: $standard-trans;
+            display: none;
         }
         .spotifyPlayer4{
             transition: $standard-trans;
@@ -93,8 +103,9 @@
     }
 }
 
+
 /* MOBILE MQ */
-@media screen and (max-width:600px){
+@media screen and (max-width:400px){
     .indexTitle{
         font-size: 1rem;
     }
